@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var f=v=>v
+    // 等同于
+    // var f= function(v){
+    //     return v
+    // }
+    console.log(f(2))
+
+    var g=()=>5
+    // 等同于
+    // function g(){
+    //     return 5
+    // }
+    console.log(g())
+
+    // 4次方
+    var a=b=>b*b*b*b
+    // 等同于
+    // var a= function(v){
+    //     return b*b*b*b
+    // }
+    console.log(a(2))
+    
+    // 没有参数的箭头函数：生成一个0-100的随机数
+    var num=()=>Math.floor(Math.random()*101)
+    console.log(num())
+
+    // 两个参数的箭头函数：返回两个参数的平均值并取整
+    var two=(n1,n2)=>{
+        return parseInt((n1+n2)/2)
+    }
+    console.log(two(10,2))
+
+    // 1)定义一个对象
+    // 2)对象内部定义一个属性name和一个方法getName
+    // 3)方法内部使用setTimeout调用两个函数，一个函数用箭头函数定义，一个函数不用箭头函数定义
+    // 在这两个函数内部输出this或者this.name
+    // var person={
+    //     name:"aaa",
+    //     getName:function(){
+    //         setTimeout(function(){
+    //             console.log(this)
+    //         },700);
+    //         setTimeout(()=>{
+    //             console.log(this)
+    //         },700)
+    //     }
+    // }
+    // person.getName()
+
+    //使用function方法定义构造函数
+    function Person(name,age ){
+        this.name=name
+        this.age=age
+    }
+    var lenhart = new Person("lenheart",25)
+    console.log(lenhart)
+    
+    //尝试使用箭头函数方法定义构造函数
+    var Person = (name,age)=>{
+        this.name = name
+        this.age = age
+    }
+    var lenhart = new Person("lenheart",25);
+    console.log(lenhart); // Uncaught TypeError: Person is not a constructor 
+
+    // 2)不可以当作构造函数,也就是说,不可以使用new命令,否则会抛出一个错误
+</script>
+</html>

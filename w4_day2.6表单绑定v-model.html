@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <!-- v-model双向数据绑定 -->
+        用户名:<input type="text" v-model="mytext">
+        <input type="checkbox" v-model="isChecked">记住用户名
+        <button >登录</button><!--@click="handleLogin()"-->
+
+        <p><input type="checkbox" v-model="Checked" value="react">react</p>
+        <p><input type="checkbox" v-model="Checked" value="vue">vue</p>
+        <p><input type="checkbox" v-model="Checked" value="javascript">javascript</p>
+        {{Checked}} 
+        
+
+        <p>react: <input type="radio" value="react" v-model="picked"></p>
+        <p>vue: <input type="radio" value="vue" v-model="picked"></p>
+        {{picked}}
+    </div>
+
+    <script>
+        var vm=new Vue({
+            el:"#box",
+            data:{
+                mytext: "",//localStorage,getItem("username")
+                isChecked:true,
+                Checked:[],
+                picked:'react',
+            },
+            methods:{
+                // handleLogin(){
+                //     if(this.isChecked){
+                //         localStorage.setItem("username",this.mytext)
+                //     }
+                // }
+            },
+        })
+    </script>
+</body>
+</html>

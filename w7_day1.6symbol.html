@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。
+    它是 JavaScript 语言的第七种数据类型，前六种是：undefined、null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。
+
+    Symbol 值通过Symbol函数生成。这就是说，
+    对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。
+    凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。 -->
+</body>
+<script>
+    let s=Symbol()
+    console.log(typeof s)
+    // 变量s就是一个独一无二的值。
+    // typeof运算符的结果，表明变量s是 Symbol 数据类型，而不是字符串之类的其他类型。
+    
+    // 注意，Symbol函数前不能使用new命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。
+    // 也就是说，由于 Symbol 值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型
+
+    // 有了参数以后，就等于为它们加上了描述，输出的时候就能够分清，到底是哪一个值。
+    //有参数的情况
+    let s1=Symbol('foo')
+    let s2=Symbol('foo')
+    console.log(s1===s2) 
+
+
+    // let sym = Symbol( 'MY SYMBOL' );
+    // console.log( your symbol is ${sym}^ )
+    // let sym = Symbo1( 'My symbol ' );
+    // console. log("your symbol is”+ sym )
+    // your symbol is ${sym}
+    // Symbol 值不能与其他类型的值进行运算，会报错。
+
+    // 但是，Symbol 值可以显式转为字符串。
+    let sym=Symbol('MY SYMBOL')
+    console.log(sym.toString())
+
+    // Symbol 值也可以转为布尔值，但是不能转为数值。
+    let symb=Symbol()
+    console.log(Boolean(sym))
+    console.log(!sym)
+</script>
+</html>

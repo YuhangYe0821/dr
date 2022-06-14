@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //js是单线程
+        // 由于js是单线程的,在同一段时间内,只能处理一个任务,干一件事情,
+        // 然后再去处理下一个任务,浏览器解析网页中的js代码,
+        // 是逐行进行读取,从上至下执行的
+
+        // 例如:打电话就是一个同步的例子,必须等待打完了一个,然后再接着打下一个的
+        //浏览器是多线程的,但解析我们的js代码,却是单线程的,但有些任务是需要消耗时间的（比如:上传,读取文件,下载等）,
+        //如果按照普通的同步方式,就会阻塞我们的代码，主线程的任务没有做完,那么下面的任务将不会执行
+        // 实例场景:给女票打电话,必须等待到对方接听,有反应后,才能继续后面的热恋,你得一直等待,干不了别的事情,在那苦等的耗着
+        // 但发短信,微信就是一个异步的例子,也许对方正忙,没有及时回复,你不必等待对方及时回应,你仍可以继续干其他的事情。等到对方看见了,便会回应你.
+
+        // 同步任务可以保证顺序一致,代码可读性好,相对容易理解,但是容易导致阻塞；
+            // 异步任务可以解决阻塞问题，但是会改变任务的顺序性，根据不同的需要去写你的代码
+            // 显然异步代码是我们常用的一种方式,也是比较复杂的
+        
+     // 使用Es6中的承诺(promise)
+
+            // 待定（pending）: 初始状态，既没有被兑现，也没有被拒绝。
+            // 已兑现（fulfilled）: 意味着操作成功完成。
+            // 已拒绝（rejected）: 意味着操作失败。
+
+        // resolve函数的作用是，将Promise对象的状态从“未完成”变为“成功”（即从 pending 变为 resolved），
+        //在异步操作成功时调用，并将异步操作的结果，作为参数传递出去；
+        //reject函数的作用是，将Promise对象的状态从“未完成”变为“失败”（即从 pending 变为 rejected），
+        // 在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。
+
+        const first = new Promise((resolve, reject)=>{
+            var a = true
+            if(a){
+                resolve("操作成功啦")
+            }else{
+                reject("操作失败啦")
+            }
+            }).then((data)=>{
+                console.log("成功")
+            },(reason)=>{
+                console.log("失败")
+            }).catch(error=>{
+                console.log("失败信息")
+            })
+        //   Promise实例生成以后，可以用then方法分别指定resolved状态
+        //   和rejected状态的回调函数。
+</script>
+</html>

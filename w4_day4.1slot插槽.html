@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <hello>
+            <div slot="slota">我是slot a</div>
+            <div slot="slotb">我是slot b</div>
+        </hello>
+
+    </div>
+
+    <script>
+
+        var hello={
+            template:`
+                <div>
+                    <slot name="slota"></slot>
+                    hello组件
+                    <slot name="slotb"></slot>
+                </div>
+            `,
+        }
+
+        new Vue({
+            el:"#box",
+            data:{
+            },
+            components:{
+                hello
+            },
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <div @click.capture="Div">
+            <button @click="Btn">捕获</button>
+        </div>
+         <!-- .capture事件捕获(与冒泡相反,由外向内) -->
+
+        <a href="http://wwww.baidu.com" @click.prevent="A">百度</a>
+         <!-- .prevent 阻止默认行为 -->
+        
+
+        <div @click.once="isDiv">once</div>
+        <!-- .once 只能用一次，无论点击几次只执行一次 -->
+
+        <input type="text" @keyup.enter="In">
+    </div>
+
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+            },
+            methods:{
+                Div(){
+                    console.log("div")
+                },
+                Btn(){
+                    console.log("btn")
+                },
+                A(){
+                    console.log("阻止跳转")
+                },
+                isDiv(){
+                    console.log("once")
+                },
+                In(){
+                    console.log("enter")
+                },
+            },
+            computed:{
+            },
+        })
+    </script>
+</body>
+</html>

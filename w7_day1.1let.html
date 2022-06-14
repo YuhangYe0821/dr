@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+       
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+
+    </div>
+
+    <script>
+        // 1.ES6 新增了let命令，用来声明变量
+        // 它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效注意：let声明的变量只在它所在的代码块有效。
+        // {
+        //     let a=10;
+        //     console.log(a)
+        // }
+        // console.log(a)
+
+        // for (let i = 0; i < 10; i++) {
+        //     console.log(i)
+        // }
+        // console.log(i)
+        // 注意：i只在for循环体内有效，在循环体外引用就会报错
+
+        // let q=10;
+        // let q=20;
+        // console.log(q)
+        // 注意：es6 let不能重复声明
+
+        // function fun(params) {
+        //     let params
+        // }
+        // fun()
+        // 注意：es6 let不能在函数内部重新声明参数 
+
+        // 2.const命令
+        // const PI = 3.14;
+        // console.log(PI);
+        // PI=3;
+        // console.log(PI);
+        // 注意：ES6 const声明一个只读的常量。一旦声明，常量的值就不能改变。
+
+        // if(true){
+        //     const num=5;
+        // }
+        // console.log(num)
+        // 注意：const的作用域与let命令相同：只在声明所在的块级作用域内有效。
+
+        // if(true){
+        //     const num=5;
+        //     console.log(num)
+        // }
+        // 注意： const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。
+
+    </script>
+</body>
+</html>

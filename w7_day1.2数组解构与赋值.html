@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+       
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+
+    </div>
+
+    <script>
+        let [a,b,c]=[1,2,3]
+        console.log(a)
+
+        // 例1
+        let [foo,[[bar],baz]]=[1,[[2],3]]
+        console.log(baz)
+
+        // 例2
+        let [,,third]=["foo","bar","baz"]
+        console.log(third)
+
+        //例3
+        let [x,,y]=[1,2,3]
+        console.log(y)
+
+        //例4
+        let [head,...tail]=[1,2,3,4]
+        console.log(tail)
+
+        //例5
+        let [q,w,...e]=[1,2,3,4]
+        console.log(e)
+        // 这种写法也叫模式匹配 只要等号两边模式相同（解构成功），左边变量就会被赋予对应的值
+
+        //例6
+        // let [B,C]=[1,2]
+        // console.log(A)
+
+        //例7
+        let [d,f]=[1,2,3]
+        console.log(f)
+        //注意：属于不完全解构，但是可以成功
+        
+        // let [fo] = 1
+        // let [fo] = false
+        // let [fo] = NaN
+        // let [fo] = undefined
+        // let [fo] = null
+        // let [fo] = {} 
+        // console.log(fo); 
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <hello1></hello1>
+        <hello2></hello2>
+    </div>
+
+    <script>
+        var vm=new Vue({
+            el:"#box",
+            data:{
+            },
+            components:{
+                "hello1":{
+                    template:`
+                    <div>
+                        <p>{{myhello1}}</p>
+                        <button @click="handleClick1">点击</button>
+                    </div>
+                    `,
+                    data(){
+                        return{
+                            myhello1:"我是hello1组件"
+                        }
+                    },
+                    methods:{
+                        handleClick1(){
+                            this.myhello1='改变hello1'
+                        }
+                    }
+                },
+                "hello2":{
+                    template:`
+                    <div>
+                        <p>{{myhello2}}</p>
+                        <button @click="handleClick2">点击</button>
+                    </div>
+                    `,
+                    data(){
+                        return{
+                            myhello2:"我是hello2组件"
+                        }
+                    },
+                    methods:{
+                        handleClick2(){
+                            this.myhello2='改变hello2'
+                        }
+                    }
+                },
+            },
+        })
+    </script>
+</body>
+</html>

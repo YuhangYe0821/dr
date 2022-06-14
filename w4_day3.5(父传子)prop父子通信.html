@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <p>父组件</p>
+        <hello msg="ancdv"></hello>
+
+        <p>父组件</p>
+        <child :aaa="aaa"></child>
+         <!-- 属性加":"可以传数字或者boolean类型,不加":",只能传字符串 -->
+    </div>
+
+    <script>
+        Vue.component("hello",{
+            template:`
+                <div>
+                    <button @click="handleClick()">点我</button>
+                </div>
+            `,
+            props:['msg'],
+            methods:{
+                handleClick(){
+                    console.log(this.msg)
+                }
+            }
+        })
+
+        var vm=new Vue({
+            el:"#box",
+            data:{
+                aaa:'我是aaa'
+            },
+            components:{
+                "child":{
+                    template:`
+                    <div style="background:red">
+                        <p>{{aaa}}</p>
+                        <button @click="handleClick()">点我</button>
+                    </div>
+                `,
+                props:['aaa'],
+                methods:{
+                    handleClick(){
+                        console.log(this.aaa)
+                }
+            }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
