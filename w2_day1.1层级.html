@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .all{
+            width: 400px;
+            height: 200px;
+            background-color: yellow;
+            position: relative;
+            left: 50%;
+            top: 200px;
+            margin-left: -200px;
+        }
+        .all .d1{
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            z-index: 3;
+
+        }
+        .all .d2{
+            width: 150px;
+            height: 30px;
+            background-color: red;
+            position: absolute;
+            z-index: 0;
+        }
+        /* 定位元素层叠属性：
+        z-index : auto |
+        表示一个元素在叠加顺序上的上下立体关系。
+        auto：默认值。遵从其父对象
+        number:无单位的整数值。可为负数
+        说明：
+        1）z-index值较大的元素将叠加在值小的元素之上，对于未指定此属性的定位元素，z-index值为正数的对象会在其之上，而z-index值为负数的对象在其之下。
+        2）这个属性适用于定位元素，用来确定定位元素在垂直于显示屏方向的层叠顺序，也就是说如果元素没有定位，设置这个属性是无效的。
+        3）如果两个元素z-index相同，那么按文档流顺序，后面的覆盖前面的。
+        4）如果两个元素没有设置z-index，一个定位一个没定位，那么定位的覆盖不定位的。
+        5）如果父元素z-index有效，那么子元素无论是否设置z-index都和父元素一致，会在父盒子上方，
+        即使子元素的z-index比父盒子的小，也会在父盒子上方，如果父元素的z-index失效，那么子元素生效。 */
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="d1"></div>
+        <div class="d2"></div>
+    </div>
+</body>
+</html>

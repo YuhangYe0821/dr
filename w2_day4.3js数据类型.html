@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // undefined
+        // 取值：undefined
+        // 含义：当声明了变量，没有对变量进行赋值
+        // 注意：包含了undefined值的变量与尚未定义的变量还是不一样的 
+        var message;
+        console.log(message);
+
+        // null类型
+        // 取值：null
+        // 含义:表示一个空对象指针，因此如果定义了一个变量，想让这个变量将来用来保存对象，
+        // 那么最好初始化为null
+        var car=null;
+        console.log(car);
+
+        // Boolean类型
+        var cat=true,dog=false;
+        console.log(cat,dog);
+
+        // string类型 字符串
+        // 取值：由0,1或者多个字符组成的“串” 
+        // 含义：代表一组字符
+        // 用单引号【‘ ’】或者双引号【“ ”】表示string类型
+        // 说明：单引号和双引号可以相互嵌套
+        // 说明：
+        // （1）只使用字符的字符串，单引号和双引号没有区别
+        // （2）在单引号包括的字符串中可以直接使用双引号,在双引号包括的字符串中可以直接用单引号
+        // （3）如果在双引号包括的字符串中用双引号，需要用反斜杠转义，注意是“\”  ；同样在单引号包括的字符串中用单引号，也需要转义“\”
+        var pig="🐖";
+        console.log('pig',pig);
+        var helloWorld='hello\'world\'';
+        console.log(helloWorld);
+        
+        // number类型
+        // 取值：整数、浮点数（小数）、NaN、Infinity
+        // 含义：代表一个有意义或者无意义的数字
+        // 取值范围：
+        // typeof 判断数据类型
+        var a=3.1415926;
+        console.log(a);
+        var b=2e3;
+        console.log(b);
+        console.log(typeof(b));
+
+        // NaN:
+        // 含义：NaN=“Not-a-Number”，是数字类型，但不是一个数字
+        // 任何两个NaN都是不相同的，所以“NaN==NaN”返回false
+        // 判断方法：Number.isNaN() 判断一个数字是不是NaN
+        var c='asd';
+        var d=Number(c);
+        var e=Number('asd');
+        console.log(c,d);
+        console.log(d==e);
+        console.log(Number.isNaN(d));
+
+        // Infinity：
+        // 含义：无穷大
+        // 判断方法：
+        // Number.isFinite() 判断是否为有穷
+        // === Infinity
+        // 产生：超出 1.7976931348623157E+103088 的数值即为Infinity，
+        // 小于 -1.7976931348623157E+103088 的数值为无穷小。
+        // Infinity 有正负 
+        var A=1.7976931348623157E+103088;
+        var B=-1.7976931348623157E+103088;
+        var C=100;
+        console.log(A);
+        console.log(B);
+        console.log(Number.isFinite(C));
+        //Number.isFinite(Infinity); // false
+        // Number.isFinite(NaN); // false
+        // Number.isFinite(-Infinity); // false
+        // Number.isFinite(0); // true
+        // Number.isFinite(2e64); // true
+        // Number.isFinite('0'); // false,
+        //全局函数 isFinite('0') 会返回 true 
+
+        var bird={
+            name:'qq',
+            age:2,
+            color:'white',
+        };
+        console.log(bird);
+        console.log('鸟的名字：'+bird.name);
+        console.log('鸟的年龄：'+bird.age);
+        
+        var son={};
+        son.name='yx';
+        son.age=21;
+        console.log(son);
+        
+        // 引用数据类型
+        // 一、object类型
+        // 含义：ECMAScript中的对象，其实就是一组数据（属性）和功能（方法）的集合
+        // 创建方法：属性和方法，都称为对象的成员
+        // 定义一个空对象： 
+        // var person={};  //字面量定义对象
+        // var person_1=new Object();  //通过new Object创建对象
+        var boy=new Object();
+        boy['name']='www';
+        console.log(boy);
+        console.log(boy['name']);
+
+        //二、数组（array）
+        //1、使用new Array创建数组：var arr=new Array（10）；//创建一个包含10
+        //2、使用数组字面量表示法：var arr1=[10];
+        //区别：[]和new array()在语法上唯一的区别是 new array可以直接设置 
+        //new Array()在构造数组的时候有下面几种能够方法
+        var isArray=[1,2,3];
+        var isArray2 = new Array('1','2','3');
+        console.log(isArray);
+        console.log(isArray2);
+        console.log(typeof(isArray));
+
+        //函数
+        function fun(){
+            x=5;
+            return x;
+        }
+        console.log(fun());
+        var fun1=fun();
+        console.log(fun1);
+
+        
+    </script>
+</body>
+</html>

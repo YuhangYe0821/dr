@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        .red{
+            background: red;
+        }
+        .blue{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>{{name}}{{age}}</div>
+        <div v-html="name"></div> <!-- 识别html标签，类似于innerHTML -->
+        <img :src="myImg" width="100px" alt="dance" title="dance"><!-- v-bind的缩写是: -->
+        <div :style="myStyle">dance</div>
+        <div :class="myClass">jump</div>
+    </div>
+
+    <script>
+        var vm=new Vue({
+            el:"#box",
+            data:{ 
+                name:"<h1>张三</h1>",
+                age:22,
+                myImg:"../img/dance.gif",
+                myStyle:{
+                    color:"red",
+                    fontSize:"32px",
+                    backgroundColor:"black",
+                    width:"100px",
+                },
+                myClass:{
+                    red:false,
+                    blue:true,
+                }
+            }
+        })
+    </script>
+</body>
+</html>

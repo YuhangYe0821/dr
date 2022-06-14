@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>0000000</li>
+        <li>6666666</li>
+    </ul>
+    <button onclick="b1()">改变</button>
+
+    <script>
+        //getElementsByTagName() 查找指定范围内的所有标签
+        var myul=document.getElementsByTagName('ul')[0];
+        function b1(){
+            myul.getElementsByTagName('li')[0].innerHTML='1111111'
+            myul.getElementsByTagName('li')[1].innerHTML='9999999'
+        }
+    </script>
+</body>
+</html>

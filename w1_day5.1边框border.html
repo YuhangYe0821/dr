@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 10px;
+        }
+        #d1{
+            width: 100px;
+            height: 100px;
+            border: 5px dashed rgb(221, 24, 24);
+        }
+        #d2{
+            width: 100px;
+            height: 100px;
+            border: 5px double rgb(247, 156, 156);
+        }
+        #d3{
+            width: 100px;
+            height: 100px;
+            border-bottom: 5px double rgb(247, 156, 156);
+        }
+        #d4,#d5,#d6,#d7{
+            width: 0px;
+            height: 0px;
+            float: left;
+        }
+        #d4{
+            border-top: 50px solid aqua;
+            border-bottom: 50px solid aqua;
+            border-right: 50px solid aqua;
+            border-left: 50px solid aqua;
+        }
+        #d5{
+            border-top: 50px solid red;
+            border-bottom: 50px solid red;
+            border-right: 50px solid red;
+            border-left: 50px solid aqua;
+        }
+        #d6{
+            border-top: 50px solid gold;
+            border-bottom: 50px solid gold;
+            border-right: 50px solid gold;
+            border-left: 50px solid red;
+        }
+        #d7{
+            border-top: 50px solid green;
+            border-bottom: 50px solid green;
+            border-right: 50px solid green;
+            border-left: 50px solid gold;
+        }
+        /* border的使用方法 border:3px solid red;  (1px solid #ccc)
+
+        边框border:线型（solid/dashed/dotted/double）   粗细（数值+单位） 颜色;
+
+        solid:实线，dashed:线状虚线，dotted:点状虚线，double:双线(至少3px)，
+
+        border按功能分：
+        边框大小   border-width;
+        边框类型   border-style;
+        边框颜色   border-color;
+
+        border按方向分：
+        右边框 border-right；
+        左边框 border-left；
+        上边框 border-top；
+        下边框 border-bottom: */
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+</body>
+</html>

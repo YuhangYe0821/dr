@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .d1{
+            overflow: auto;
+            background-color: blueviolet;
+        }
+        .d2{
+            overflow: hidden;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">987878998797987897987889
+        <div class="d2">
+            21312312213123123123123133
+        </div>
+    </div>
+     <!-- 溢出属性
+    overflow:visible/hidden(隐藏)/scroll/auto(自动)/inherit;
+    visible:默认值，内容不会被修剪，会出现在元素框外
+    hidden:内容会被修剪，并且其余内容不可见
+    scroll:内容会被修剪，但是浏览器会显示滚动条，以便查看其余内容
+    auto:如果内容会被修剪，则浏览器会显示滚动条，以便查看其余内容
+    inherit:规定应该从父元素继承overflow属性 -->
+</body>
+</html>

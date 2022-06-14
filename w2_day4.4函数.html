@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 使用function来声明
+        // functionName函数名（可选）
+        // param1、param2参数列表
+        
+        // 形参和实参
+        // 形参：定义函数时，规定的参数  （a,b）
+        // 实参：函数调用时，传递的参数   （2,3）
+        // 在函数调用时，实际上是把实参的值复制了一个副本给形参
+        // 函数调用时传递的参数个数，不是必须与函数定义时传递的参数个数一致
+        
+        function f1(a,b){
+            c=a+b
+            return c
+        }
+        console.log(f1(1,2));
+
+
+        function f2(name,age,hobby){
+            console.log('名字:'+name+'年龄:'+age+'爱好:'+hobby)
+        }
+        f2('qq',12,'无');
+
+    </script>
+</body>
+</html>

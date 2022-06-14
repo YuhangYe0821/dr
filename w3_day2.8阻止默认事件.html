@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box a{
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            margin: 150px;
+            text-align: center;
+            line-height: 50px;
+            background-color: rgb(99, 191, 233);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <a href="http://www.baidu.com/">不链接的超链接</a>
+        <a href="http://qq.com/">不链接的超链接</a>
+        <a href="http://jd.com/">不链接的超链接</a>
+    </div>
+    
+    <script>
+        var parent=document.getElementById("box");
+        var child=parent.getElementsByTagName("a");
+        parent.onclick=function(){
+            alert("div被点击了");
+        }
+        for(var i=0;i<child.length;i++){
+            child[i].onclick =function(e){
+                e.preventDefault();//阻止默认事件
+                alert("你点击的超链接是"+this.href)
+            }
+        }
+    </script>
+</body>
+</html>

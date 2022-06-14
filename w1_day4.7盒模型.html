@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 100px;
+            height: 100px;
+
+            border: 1px solid rgb(240, 179, 179);
+            /* 外边框 */
+
+            padding: 30px ;
+            /* padding的使用方法
+            内边距：padding,在设定页面中一个元素内容到元素的边缘(边框) 之间的距离。
+            也称补白、填充。
+            用法：
+            1、用来调整内容在容器中的位置关系
+            2、用来调整子元素在父元素中的位置关系。
+            3、padding值是额外加在元素原有大小之上的，如想保证元素大小不变，需从元素宽或高上减掉后添加的padding值。（width height-----容积
+            4、支持背景
+            属性值的4种方式：
+            四值法：上   右   下   左 {padding:10px   20px   30px    40px;}
+            三值法：上    右左    下  {padding:10px   20px   30px ;}
+            二值法：上下    右左      {padding:10px   20px  ;}
+            一值法：四个方向     padding:2px;/*定义元素四周填充为2px*/
+            /* 说明：可单独设置一方向填充（内边距），
+            如：padding-top:10px; 
+            padding-right:10px;
+            padding-bottom:10px;
+            padding-left:10px; */
+            
+            margin: 10px ;
+            /*margin的使用方法
+            边界：margin,在元素外边的空白区域，被称为外边距。
+
+            属性值的4种方式： 
+            四个值：上 右 下 左
+            三个值：上 左右 下
+            二个值：上下 左右
+            一个值：四个方向 
+
+            margin:0 auto;     定义元素上、下边界为0px，在浏览器中横向居中。*/
+
+            /* 说明：可单独设置单一方向边界，
+            如：
+            margin-top:10px;
+            margin-right:10px;
+            margin-bottom:10px;
+            margin-left:10px; */
+        }
+        #d2{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒模型
+
+    盒模型是css布局的基石，它规定了网页元素如何显示以及元素间相互关系。
+    css定义所有的元素都可以拥有像盒子一样的外形和平面空间，即都包含：  外边距、边框、内边距、内容区，这就是盒模型。
+    margin  border  padding  content(width  height) -->
+    <div id="d1">box盒子d1</div>
+    <div id="d2">box盒子d2</div>
+</body>
+</html>

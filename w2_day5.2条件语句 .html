@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1、选择结构 
+        // if(condition1){
+        //操作1
+        // } else if (condition2){
+        //操作2
+        // }else if(condition3){
+        //操作3
+        // } else {
+        //操作4
+        // }
+        //编写一个程序，计算邮局汇款的汇费，如果汇费会额小于100元
+        //汇费为一元，如果金额在100元与5000元之间，按1%收取汇费，如果金额大于5000元，汇费为50元
+        function a1(x){
+            if(x<100){
+                y=1
+            }
+            else if(x>=100 && x<=5000){
+                y=0.01*x
+            }
+            else if(x>5000){
+                y=50
+            }
+            return y
+        }
+        console.log(a1(3))
+
+        // 2、switch语句
+        // switch(表达式){
+        //     case n:
+        //     代码块
+        //     break;
+        //     case n:
+        //     代码块
+        //      break;
+        //      default:
+        //      默认代码块
+        // } 
+        // 饿了么红包：第三个人抢3元，第5个人抢4元，第7个人抢10元，
+        // 第9个人请第10个人，第10个人免单一次 
+        
+        a=10
+        switch(a){
+            case 3:
+            console.log('3元')
+            break
+            case 5:
+            console.log('4元')
+            break
+            case 7:
+            console.log('10元')
+            break
+            case 9:
+            console.log('请客')
+            break
+            case 10:
+            console.log('免单')
+            break
+        }
+        
+    </script>
+</body>
+</html>

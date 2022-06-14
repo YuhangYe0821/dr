@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+        }
+        .d1 .d2{
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+            
+            position: relative;/*相对定位——相对自身（标准流里的位置）定位，跟父盒子毫无关系*/
+            top: 20px;
+            left: 20px;
+        }
+        .d1 .d3{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+
+            position: absolute;/*绝对定位——子绝父相，如果父盒子没有相对定位，那么就相对body定位 */
+            top: 20px;
+            left: 20px;
+        }
+        /* position 定位属性
+        一、语法：position：static /relative(相对)/absolute/fixed
+        取值：
+        1、static：默认值，无特殊定位，对象遵循HTML原则（标准流）；
+        2、relative ：相对定位，将依据right，top，left，bottom（相对自己定位）等属性在正常文档流中偏移位置；
+        3、absolute：绝对定位，将对象从文档流中脱离出来，使用left/right/top/bottom等属性相对其 相对定位（绝对定位）的父盒子 进行定位；如果不存在这样的父对象，则依据body对象；
+        4、fixed：固定定位，相对窗口定位；
+
+        各个定位的特点
+
+        相对定位——相对自身（标准流里的位置）定位，跟父盒子毫无关系
+
+        绝对定位——
+                     子绝父相，
+                     如果父盒子没有相对定位，那么就相对body定位  
+
+        固定定位——相对窗口定位（如：返回顶部，定位在上方的导航） */
+    </style>
+</head>
+<body>
+    <div class="d1">32132132132131231321213213
+        <div class="d2">123</div>
+        <div class="d3">123</div>
+    </div>
+</body>
+</html>

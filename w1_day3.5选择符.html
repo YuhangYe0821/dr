@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div_1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .div_2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div_3,#div_4,#div_5{
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            margin-top: 5px;
+        }
+        #div_6 p{
+            width: 50px;
+            height: 20px;
+            background-color: red;
+        }
+        #div_6 ul li{
+            width: 50px;
+            height: 80px;
+            background-color: rebeccapurple;
+        }
+        #div_7 div.div_8{
+            width: 30px;
+            height: 30px;
+            background-color:deeppink;
+        }
+        a{
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+        a:visited{
+            background-color: rgb(255, 255, 255);
+        }
+        a:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 选择符表示要定义样式的对象，可以是元素本身，也可以是一类元素或者制定名称的元素.
+    常用的选择符有八种：
+    基本选择符：类型选择符(div{})，id选择符(#id{}) ，class选择符().class{})
+    复合选择符：通配符，群组选择符，包含选择符，指定选择符，伪类选择符。
+    说明：
+    1）当这4个超链接伪类选择符联合使用时，应注意他们的顺序，推荐顺序为：
+    a:link,a:visited,a:hover,a:active,错误的顺序有时会使超链接的样式失效（覆盖问题）；
+    2）为了简化代码，可以把伪类选择符中相同的声明提出来放在a选择符中；
+    例如：a{color:red;}     a:hover{color:green;} 
+    表示超链接的三种状态都相同，只有鼠标划过变颜色 -->
+
+    <!-- id选择符 -->
+    <div id="div_1">1</div>
+
+    <!-- class选择符 -->
+    <div class="div_2">2</div>
+    
+    <!-- 群组选择符 -->
+    <div id="div_3">3</div>
+    <div id="div_4">4</div>
+    <div id="div_5">5</div>
+
+    <!-- 包含选择符 -->
+    <div id="div_6">
+        <p>g</p>
+        <ul>
+            <li>G!</li>
+        </ul>
+    </div>
+
+    <!-- 指定选择符 -->
+    <div id="div_7">
+        <div class="div_8">8</div>
+    </div>
+
+    <!-- 伪类选择符 -->
+    <a href="https://www.baidu.com/">百度</a>
+
+</body>
+</html>

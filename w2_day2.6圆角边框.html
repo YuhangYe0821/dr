@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50px 0 0 0;
+        }
+    /* 
+    圆角边框
+
+    border-radius
+    border-radius：20px;      
+               四个角的圆角是一样的
+    border-radius：20px 30px;      
+               top-left和bottom-right相等并取第一个值；
+               top-right和bottom-left相等并取第二个值；
+    border-radius：20px 30px 40px;
+         第一个值取top-left，
+               第二个值top-right和bottom-left，
+               第三个值bottom-right            
+    border-radius：20px 20px 30px 40px;
+         第一个值取top-left，
+               第二个值top-right，
+               第三个值bottom-right，
+               第四个值bottom-left 
+
+    默认值none，表示元素没有圆角；
+    如果要重置元素没有圆角，取值none并无效果，需要设置为0；
+
+    由于各浏览器厂商对border-radius的子属性解析不一样，造成了各浏览器下的派生子属性写法有所区别。
+
+    1)gecko内核
+    -moz-border-radius-topleft  左上角
+    -moz-border-radius-topright  右上角
+    -moz-border-radius-bottomright  右下角
+    -moz-border-radius-bottomleft  左下角
+    2）webkit内核
+    -webkit-border-top-left-radius  左上角
+    -webkit-border-top-right-radius  右上角
+    -webkit-border-bottom-right-radius  右下角
+    -webkit-border-bottom-left-radius  左下角
+    3）presto和trident内核
+    border-top-left-radius  左上角
+    border-top-right-radius  右上角
+    border-bottom-right-radius  右下角
+    border-bottom-left-radius  左下角
+
+    border-radius 的取值：
+    border-radius:水平圆角半径/垂直圆角半径；
+    只取一个值代表垂直水平相同；
+
+    border-radius:60px 40px 30px 20px / 30px 20px 10px 5px;
+    元素左上角是一个水平半径60px，垂直半径30px的不规则圆角；
+    右上角是一个水平半径40px，垂直半径20px的不规则圆角；
+    右下角是一个水平半径30px，垂直半径10px的不规则圆角；
+    左下角是一个水平半径20px，垂直半径5px的不规则圆角；
+
+
+    但分开设置元素各个顶角的圆角的水平和垂直半径圆角效果时，不需要“/”:
+    border-top-left-radius:10px 50px;
+    border-top-right-radius:20px 60px;
+
+    加上反而是一种错误的写法：
+    border-top-left-radius:10px / 50px;
+    border-top-right-radius:20px / 60px;
+
+    单个圆角：
+    border-radius:50px 0 0 0;
+    效果等同于：
+    -moz-border-radius-topleft:50px;
+    -webkit-border-top-left-radius:50px;
+    border-top-left-radius:50px; 
+    */
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

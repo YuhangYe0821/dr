@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:450px;
+            height: 33px;
+            line-height: 33px;
+            border: 1px solid #c00;
+            text-align: center;
+        }
+        .box{
+            border: 2px solid #039;
+            color: #039;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box" class="box">点击可以响应，5秒内点击无效</div>
+
+
+
+    <script>
+        var box = document.getElementById("box");
+
+        box.addEventListener("click",fn);
+        function fn(){
+            box.innerText = "clicked !! 5s内点击不能被响应"
+            box.removeEventListener("click",fn)
+            alert(new Date);
+            box.className="";
+            setTimeout(cfn,5000)
+        }
+        function cfn(){
+            box.addEventListener("click",fn);
+            box.innerText ="点击可以响应，点击后5s内点击无效"
+        }
+    </script>
+</body>
+</html>

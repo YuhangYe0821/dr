@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.baidu.com/" id="fm">
+        <input type="text" value="请输入内容" id="ipt">
+    </form>
+    
+
+    <script>
+        var is_ipt=document.getElementById('ipt');
+        var is_fm=document.getElementById('fm');
+
+        is_ipt.onfocus=function(){
+            is_ipt.value=""
+        }
+
+        is_ipt.onblur=function(){
+            //让text内容恢复原样当用户没有输入内容的时 候
+            if(is_ipt.value ===""){    
+                is_ipt.value='请输入搜索内容'
+            }
+        }
+            //按下回车键表单会自动提交到action设置的地址
+            //当用户没有输入内容的时候，提示不能提交，只有当用户输入内容的时候才可以
+        is_fm.onsubmit=function(){
+            if(is_ipt.value==""){
+                alert("搜索内容不能为空")
+                return false
+            }
+        }
+
+    </script>
+</body>
+</html>

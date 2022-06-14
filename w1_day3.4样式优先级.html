@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css_3.2.css">
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- !important 优先级永远最高的 -->
+    <!-- 内联样式的优先级高 -->
+    <!-- 内部样式表与外部样式表的优先级和书写的顺序有关，后书写的优先级别高 （覆盖的原理）。 -->
+    <div style="width: 100px; height: 100px; background-color: green;"></div>
+</body>
+</html>

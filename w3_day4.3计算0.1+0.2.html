@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 3.为什么0.1+0.2不等于0.3？在什么场景下遇到这个问题？如何解决？  -->
+
+
+   <!-- 因为在 0.1 + 0.2 进行计算的时候，实际上计算的是这两个数字在计算机里所存储的二进制
+    0.1 和 0.2 在进行二进制转换的时候会出现无限循环的情况 -->
+
+    <!-- 可以将其转换为整数后在进行运算,运算后再转为对应的小数 -->
+    <script>
+        var a=0.1;
+        var b=0.2;
+        console.log(0.1+0.2)
+        var rusult=(a*100+b*100)/100
+        console.log(rusult);
+    </script>
+</body>
+</html>

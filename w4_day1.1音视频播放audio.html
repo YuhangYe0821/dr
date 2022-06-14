@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- html5新增了audio和video元素，用以在页面中播放音频和视频，取代之前使用的flash，embed等。 -->
+    <!-- 音频格式有：MP3，wav，ogg，视频文件播放格式：MP4，webm，ogg。不同浏览器对视频格式的支持
+    的程度也有所不同，单目前主浏览器都已支持video和audio这两个html5元素 -->
+
+    <!-- 常用属性如下：
+    1)controls:播放控件
+    2)autoplay:自动播放
+    3)loop:循环播放
+    4)muted:静音
+    5)width:视频播放器的宽度
+    6)height:视频播放器的高度
+    7)preload:预加载，常用属性值为auto（预加载视频）、metadata（仅加载元数据，
+    如文件大小，时间，第一帧）、none（不执行预加载）；
+    8）poster：视频文件默认显示的图片
+
+    上面属性中，controls，autoplay、loop、muted在设置时属性和属性值相同，按照HTML5上面
+    的代码规范，也写属性名即可。
+    为了浏览器的兼容性，有时需要同时提供多种视频或者音频文件 -->
+
+    <audio controls autoplay>
+        <source src="../mp3,4/日本群星 (オムニバス) - Deja Vu.mp3" type="audio/mp3">
+    </audio>
+
+    <button id="btn" style="display:block;">播放</button>
+
+    <video controls autoplay poster="1.jfif" id="mp4">
+        <source src="../mp3,4/guanggao.mp4" type="audio/mp4">
+    </video>
+
+
+
+    <script>
+        btn.onclick = function () {
+            if (mp4.paused) {
+                mp4.play();
+                btn.innerText = "暂停"
+            } else {
+                mp4.pause();
+                btn.innerText = "播放"
+            }
+        }
+    </script>
+    <!-- 方法对视频和音频进行操作
+
+        1）paly():播放音频或视频
+        2）pause():暂停音频或视频
+        3）load():重新加载音频或视频
+        4）canPlayType:检测浏览器能播放的音频或视频的类型
+        
+        视频事件，可以覆盖对音频，视频的各种情况
+        1)onpause     暂停多媒体
+        2)onplay   开始播放多媒体
+        3)onpalying 正在播放多媒体
+        4)onloadstart 开始加载多媒体  -->
+</body>
+
+</html>

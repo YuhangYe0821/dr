@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /* 1、语法
+        do{
+            //循环体
+            //操作
+        }while(循环条件)
+        特点：
+        无论条件是否满足，都会先执行一次操作语句 */
+
+        //100以内所有的偶数和
+        var num=0;
+        var sum=0;
+        do{
+            num++;
+            if(num%2==0){
+                sum=sum+num //sum=sum+num === sum+=num
+            }
+        }while(num<=100)
+        console.log(sum)
+
+        /* 2、while(循环条件){循环体} */
+        //while会先判断执行条件，满足后在执行
+        var num0=1;
+        while(num0<5){
+            console.log(num0)
+            num0++
+        }
+
+        //3.for(循环条件) {//循环体}
+        for(i=10,j=0;i<=20;i++){
+            if(i%3==0 || i%7==0){
+                j=j+i
+            }
+        }
+        console.log(j)
+
+        // 4.for(变量 in 对象){
+        //     语句
+        // }
+        var idx;
+        var arr=[1,2,3,4,5];
+        for(idx in arr){
+            console.log(idx,arr[idx])
+        }
+
+        var obj={
+            name:'qq',
+            age:'13',
+            hobby:'run'
+        }
+        var a;
+        for(a in obj){
+            console.log(obj[a])
+        }
+        
+        for(i=1,p=0;i<100;i=i+2){
+            p=p+i;
+        }
+        console.log(p)
+
+        /*for in总是得到对象的key 或数组，字符串下标
+        forEach 直接得到值*/
+        var arr0=[2,1,4];
+        arr0.forEach(function(a,b){
+            console.log(a,b)
+        })
+        arr0.forEach(Element =>{
+            console.log(Element)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类</title>
+    <style>
+        div,p{
+            width: 600px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        ul li{
+            width: 800px;
+            height: 30px;
+            list-style: none;
+        }
+
+        /* 孩子：作为父亲的第一个子元素 */
+        /* li:first-child{
+          background-color: pink;
+        } */
+
+
+        /* 作为父元素的最后一个子元素 */
+        /* li:last-child{
+            background: yellow;
+        } */
+
+
+
+        /* 选择父元素E的第n个子元素 */
+        /* ul li:nth-child(5){
+            background: yellowgreen;
+            color: #00f;
+            font-size: 30px;
+        } */
+
+
+
+        /* 选择元素E的倒数第n个元素 */
+        /* ul li:nth-last-child(2){
+            background: violet;
+        } */
+
+
+
+
+
+
+        /* 选择父元素内只包含一个子元素，且匹配为E元素 */
+        /* div:only-child{
+            background: turquoise;
+            color: #00f;
+        } */
+
+        /* 选择父元素内具有指定类型的第n个E元素，指定了div */
+        /* div:nth-of-type(3){
+            width: 500px;
+            height: 30px;
+            background: slateblue;
+        } */
+
+
+        /* 选择父元素内具有指定类型的第1个E元素 */
+        /* p:first-of-type{
+            background: springgreen;
+        } */
+
+        /* 选择父元素内具有指定类型的最后一个E元素 */
+        /* p:last-of-type{
+            background: teal;
+        } */
+
+
+        /* 选择父元素内具有指定类型的倒数第n个E元素 */
+        /* p:nth-last-of-type(2){
+            background: tomato;
+        } */
+
+
+
+        /* 选择父元素只包含一个同类型的子元素，且匹配为E元素 */
+        /* body:only-of-type{
+            background: skyblue;
+        } */
+
+        /* 选择没有子元素的元素，而且该元素也不包含任何文本节点 */
+        /* :empty{
+            background:red;
+        } */
+
+        /* 选择匹配元素E所在文档的根元素 */
+        /* :root{
+            background: tan;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">极乐空间</a>
+    </div>
+
+    <div>div2</div>
+    <div>div3</div>
+
+    <div>
+        <div>子辈div1</div>
+    </div>
+
+
+    <p>我是p1</p>
+    <p>我是p2</p>
+    <p>我是p3</p>
+    <p>我是p4</p>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li></li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    
+</body>
+</html>

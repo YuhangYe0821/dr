@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 闭包的本质就是在一个函数内部创建另一个函数 -->
+    <!-- 
+①函数嵌套函数
+②函数内部可以引用函数外部的参数和变量
+③参数和变量不会被垃圾回收机制回收 于是这里就产生了内存消耗的问题-->
+
+    <!-- 闭包最⼤的作⽤就是隐藏变量，闭包的⼀⼤特性就是内部函数总是可以访问其所在的外部函数中声明的参数和变量，即
+使在其外部函数被返回（寿命终结）了之后
+基于此特性，JavaScript可以实现私有变量、特权变量、储存变量等 -->
+
+    <script>
+        function a() {
+            var isName = "qwe";
+            return function () {// 没有声明函数名的称为匿名函数 例如：function(){} 
+                // console.log(isName);
+                return isName
+            }
+        }
+        var b = a();
+        console.log(b())
+        // a()中的返回值是一个匿名函数，
+        // 这个函数在a()作用域内部，
+        // 所以它可以获取a()作用域下变量name的值，
+        // 将这个值作为返回值赋给全局作用域下的变量b,
+        // 实现了在全局变量下获取到局部变量中的变量的值
+
+        function fun() {//参数和变量不会被垃圾回收机制回收 于是这里就产生了内存消耗的问题
+            var num = 1;
+            return function () {
+                var n = 0;
+                console.log(num++)
+                console.log(n++)
+            }
+        }
+        var fun1 = fun();
+        fun1();
+        fun1();
+    // 一般情况下，在函数fn执行完后，就应该连同它里面的变量一同被销毁，
+    // 但是在这个例子中，匿名函数作为fn的返回值被赋值给了fn1，
+    // 这时候相当于fn1=function(){var n = 0 … }，
+    // 并且匿名函数内部引用着fn里的变量num，所以变量num无法被销毁，
+    // 而变量n是每次被调用时新创建的，
+    // 所以每次fn1执行完后它就把属于自己的变量连同自己一起销毁，
+    // 于是乎最后就剩下孤零零的num，于是这里就产生了内存消耗的问题 
+    </script>
+</body>
+
+</html>

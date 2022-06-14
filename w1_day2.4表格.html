@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表格 -->
+    
+    <!-- 快捷建表
+        table>tr*2>td*2
+    -->
+    <!-- bgcolor="表格的背景色"
+    cellspacing="单元格与单元格之间的间距"
+    cellpadding="单元格与内容之间的间距"
+    align="right/center/left"
+    水平对齐方式：align="left/center/right" -->
+    <table width="200" height="100" border="10" cellspacing="0" cellpadding="0" align="center">
+        <tr align="center">
+            <td align="right">今年寄了,</td>
+            <td align="left" bgcolor="red">那就开摆!</td>
+        </tr>
+    </table>
+    
+    <table width="200" height="100" border="3" cellspacing="0" cellpadding="0" align="right">
+        <tr align="center">
+            <td>1</td>
+            <!-- rowspan="所要合并的单元格的行数"合并行 -->
+            <!-- <td rowspan="2">1</td>  合并行，删除<td>3</td> -->
+            <!-- colspan="所要合并的单元格的列数"合并列 -->
+            <!-- <td colspan="2">1</td>  合并列，删除<td>2</td> -->
+            <td>2</td>
+        </tr>
+        <tr align="center">
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <table width="200" height="100" border="3" cellspacing="0" cellpadding="0">
+        <tr align="center">
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr align="center"> 
+            <!-- <td>3</td> -->
+            <td>4</td>
+        </tr>
+    </table>
+
+    <table width="200" height="100" border="3" cellspacing="0" cellpadding="0">
+        <tr align="center">
+            <td colspan="2">1</td>
+            <!-- <td>2</td> -->
+        </tr>
+        <tr align="center"> 
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <!-- 11） 数据表格的作用及组成
+    作用：显示数据
+    <table  width="value"  height="value"  border="value"  bgcolor="value" cellspacing="value"  cellpadding="value">
+    <tr>
+    <td></td>
+    <td></td>
+    </tr>
+    </table>
+    注：1个tr表示一行;一个td表示一列(一个单元格)
+    *数据表格的相关属性
+
+    1）width="表格的宽度"
+    2）height="表格的高度"
+    3）border="表格的边框"
+    4）bgcolor="表格的背景色"
+    5）cellspacing="单元格与单元格之间的间距"
+    6）cellpadding="单元格与内容之间的间距" 
+    7）水平对齐方式：align="left/center/right";（写在td身上）
+
+    8)合并单元格属性：
+    colspan=“所要合并的单元格的列数"合并列;
+    rowspan=“所要合并单元格的行数”合并行; -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 1500px;
+            height: 1000px;
+            background: yellow url(../biaoqing/1.png) repeat-x top fixed;
+            /* background-attachment: fixed;  背景固定*/
+        }
+        /* 背景属性的缩写语法：background:属性值1   属性值2   属性值3；
+        背景缩写：background:#f60 url（背景图片的路径及全称） no-repeat center top；
+        注意：背景定位的两个值要挨着，并且顺序不能颠倒。 */
+        .d2{
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            background-image: url(../biaoqing/11.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- 关于背景的css声明
+1、背景颜色
+语法：选择符{background-color:颜色值;} 
+2、背景图片的设置
+语法：background-image：url(背景图片的路径及全称)；
+说明：
+网页上有两种图片形式：插入图片<img src="" title="" alt=""  />、背景图；
+插入图片：属于网页内容，也就是结构，以内容的形式呈递。
+背景图：属于网页的表现，主要用来装饰页面。
+3、背景图片的显示原则
+   1）容器尺寸等于图片尺寸，背景图片正好显示在容器中;
+   2）容器尺寸大于图片尺寸，背景图片将默认平铺，直至铺满容器；
+   3）容器尺寸小于图片尺寸，只显示元素范围以内的背景图。 
+4、背景图片平铺属性
+语法：选择符{background-repeat:no-repeat/repeat/repeat-x/repeat-y }
+no-repeat:不平铺  repeat：平铺（默认值）repeat-x：横向平铺 repeat-y ：纵向平铺
+5、背景图片的位置
+语法：选择符{background-position:水平方向  垂直方向;}
+水平方向上的对齐方式（left/center/right）或具体数值 
+垂直方向上的对齐方式(top/center/bottom)或具体数值
+用英文关键字时，方向可以对调；top  right。只要有数字就不能对调。
+只写一个值，第二个默认是center。 -->
+    <div class="d1"></div>
+    <div class="d2"></div>
+</body>
+</html>

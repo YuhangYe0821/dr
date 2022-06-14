@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul0">
+        <li>111</li>
+        <li>222</li>
+    </ul>
+
+    <button onclick="fun()">点击添加</button>
+    
+    <div id="box">
+        <h1>123</h1>
+        456
+    </div>
+    <button onclick="removeFun_0()">点击移除父节点</button>
+    <button onclick="removeFun_1()">点击移除子节点h1</button>
+
+    <!-- appendChild()为元素添加一个子节点 -->
+    <script>
+        function fun() {
+            var node=document.createElement('LI');//创建新节点
+            var textNode=document.createTextNode('333');//创建一个文本节点
+            node.appendChild(textNode);//把文本节点放到新节点上
+            document.getElementById('ul0').appendChild(node);//将新节点添加到ul里
+        }
+
+        function removeFun_0() {
+            var box=document.getElementById('box');
+            var parent=box.parentNode;
+            parent.removeChild(box);
+        }
+
+        function removeFun_1() {
+            var box=document.getElementById('box');
+            var ish1=document.getElementsByTagName('h1')[0];
+            box.removeChild(ish1);
+        }
+
+    </script>
+
+</body>
+</html>

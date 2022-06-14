@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    
+</head>
+<body>
+    <div id="box">
+        <button @click="fun1()">点击</button>
+        <div v-show="myShow">v-show</div>
+        <button @click="fun2()">点击</button>
+        <div v-if="myIf">v-if</div>
+    </div>
+
+    <script>
+        // v-show做显示隐藏，只是简单的进行css切换,在控制台能看出来.
+        // 加了一个display:none
+
+        // v-if 做销毁和重新生成dom,频繁操作会消耗性能,但是安全
+        
+        var vm=new Vue({
+            el:"#box",
+            data:{
+                myShow:true,
+                myIf:true,
+            },
+            methods:{
+               fun1(){
+                   this.myShow=!this.myShow;
+               },
+               fun2(){
+                   this.myIf=!this.myIf;
+               },
+            },
+        })
+    </script>
+</body>
+</html>

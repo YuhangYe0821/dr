@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes run{
+            from{
+                top: 0;
+                left: 100px;
+            }
+            20%{
+                top: 50px;
+                left: 100px;
+            }
+            40%{
+                top: 100px;
+                left: 100px;
+            }
+            60%{
+                top: 150px;
+                left: 100px;
+            }
+            80%{
+                top: 200px;
+                left: 100px;
+            }
+            to{
+                top: 250px;
+                left: 100px;
+            }
+        }
+        img:nth-child(1){
+            animation: run 5s linear 0s infinite normal running forwards;
+        }
+        img{
+            width: 100x;
+            height: 97px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="../biaoqing/19.png" alt="">
+    <!-- animation：动画名称  动画所需时间  动画播放方式  动画开始时间  循环次数  播放方向  播放状态   动画时间外属性 -->
+    <!-- animation-name动画名称
+    animation-duration动画所需时间---完成0%-100%动画所需时间
+    animation-timing-function动画播放方式---同过渡
+    step-start马上跳到动画每一结束帧的状态
+    animation-delay等待动画的时间
+    animation-iteration-count循环次数---默认为1，infinite循环播放
+    animation-direction:播放方向----默认normal，向前播放；alternate，播放次
+    数为偶数则向前播放，为奇数时向反方向播放；
+    animation-play-state:播放状态-----running播放和pause暂停
+    animation-fill-mode:动画时间外属性----forwards动画结束后保持最后状态；
+    backforwards会向元素应用动画样式时迅速应用动画初始值。-->
+</body>
+</html>

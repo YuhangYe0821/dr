@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="ul0" style="list-style: none;">
+        <li class="li">qq</li>
+        <li class="li">aa</li>
+    </ul>
+
+    <button onclick="fun()">点击</button>
+
+    <script>
+        // 返回文档中的所有指定类名的元素集合element.getElementsByClassName()
+        var myul=document.getElementsByClassName('ul0')[0];
+        function fun(){
+            myul.getElementsByClassName('li')[1].innerHTML='ee'
+        }
+    </script>
+</body>
+</html>

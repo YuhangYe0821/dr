@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 ul{
+            list-style: none;
+            font-size: 32px;
+            color: chocolate;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #d1 ul .title{
+            font-size: 64px;
+            color: blue;
+            font-weight: bolder;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+        }
+        .p1{
+            font: italic bold 20px/2 "宋体";
+        }
+        .p2{
+            text-indent: 2em;
+            /* 首行缩进：{text-indent:value;}
+            说明：text-indent:2em;
+            1）text-indent可以取负值；
+            2）text-indent属性只对第一行起作用。  */
+        }
+        .p3{
+            word-spacing: 20px;
+            /* 词间距{word-spacing:value;}控制英文单词词距。（通用于英文词和词之间的间距） */
+        }
+        .p4{
+            letter-spacing: 10px;
+            /* 字间距{letter-spacing:value;}控制英文字母和汉字的字距。（英文字母和字母） */
+        }
+        .p5{
+            line-height: 50px;/*行高*/
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            /* 行高 line-height
+            说明：
+            1）当单行文本的行高等于容器高时，可实现单行文本在容器中垂直方向居中对齐；
+            2) 当单行文本的行高小于容器高时，可实现单行文本在容器中垂直方向居中对齐以上任意位置的定位；
+            3) 当单行文本的行高大于容器高时，可实现单行文本在容器中垂直方向居中对齐以下任意位置的定位。
+            （IE6及以下版本存在浏览器兼容问题）
+            倍行高：{line-height:2;} 2倍 ，{line-height:1.5;}1.5倍；
+            注：当使用倍行高时，不加PX，指的是当前文字字号的倍数 */
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <ul>
+            <li class="title">静夜思</li>
+            <li>床前明月光</li>
+            <li>疑是地上霜</li>
+            <li>举头望明月</li>
+            <li>低头思故乡</li>
+        </ul>
+        
+        <p class="p1">简写</p>
+        <!-- 文字属性简写：font:12px（字号）/100px（行高）  "宋体"; 
+        font属性的简写：
+        说明:font的属性值应按以下次序书写(各个属性之间用空格隔开)
+        顺序: font-style  font-weight  font-size / line-height  font-family
+        (1)简写时 , font-size和line-height只能通过斜杠/组成一个值，不能分开写。
+        (2) 顺序不能改变 ,这种简写法只有在同时指定font-size和font-family属性时
+        才起作用,你没有设定font-weight , font-style,他们会使用缺省值（默认值）。 -->
+        
+        <p class="p2">首行缩进</p>
+        
+        <p class="p3">词间距 词间距 词间距 词间距</p>
+        
+        <p class="p4">字间距</p>
+
+        <p class="p5">行高</p>
+
+    </div>
+    <!-- A、关于文本的css声明
+    1、文本大小：{font-size:value;}
+　　例：div{font-size：12px；}
+    div{font-size：14px；}
+    说明：
+    1） 属性值为数值时，必须给属性值加单位，属性值为0时除外。
+    拓展：
+    2） 单位还可以是pt，pt是绝对单位，在dpi是96的情况下，9pt=12px,12pt=16px。
+    3） 单位还可以是em，1em叫一个字节,默认情况下，1em=16px,0.75em=12px;
+
+    px
+    px是pixel缩写，是基于像素的单位.在浏览网页过程中，屏幕上的文字、图片等会随屏幕的分辨率变化而变化，一个100px宽度大小的图片，在800×600分辨率下，要占屏幕宽度的1/8，但在1024×768下，则只占约1/10。所以如果在定义字体大小时，使用px作为单位，那一旦用户改变显示器分辨率从800到1024，用户实际看到的文字就要变“小”（自然长度单位），甚至会看不清，影响浏览。 
+
+    em
+    em：即％，是相对单位，是一个相对长度单位，最初是指字母M的宽度，故名em。现指的是字符宽度的倍数，用法类似百分比，如：0.8em, 1.2em,2em等。通常1em=16px。，一般用来测量长度的通用单位(例如元素周转的页边空白和填充),当用于指定字体大小时,em单位是指父元素的字体大小。
+    在一个页面上给定了一个父元素的字体大小,这样就可以通过调整一个元素来成比例的改变所有元素大小.它可以自由缩放,比如用来制作可伸缩的样式表。
+
+    pt
+    PT是point(磅)缩写，是一种固定长度的度量单位,大小为1/72英寸。如果在web上使用pt做单位的文字，字体的大小在不同屏幕（同样分辨率）下一样，这样可能会对排版有影响，但在Word中使用pt相当方便。因为使用Word主要目的都不是为了屏幕浏览，而是输出打印。当打印到实体时，pt作为一个自然长度单位就方便实用了：比如Word中普通的文档都用“宋体 9pt”，标题用“黑体 16pt”等等，无论电脑怎么设置，打印出来永远就是这么大。
+
+    4)使用关键字(不是绝对相等的)
+    xx-small   =  9px
+    x-small    =  11px
+    small       =  13px
+    medium     =  16px  
+    large      =  19px
+    x-large    =  23px
+    xx-large   =  27px
+
+    以 medium 作为基础参照，
+    xx-small：相当于medium 3/5 ，
+    x-small: 相当于medium 3/4        (h6)，
+    small: 相当于medium 8/9           (h5)，
+    medium: 相当于medium 1         (h4)，
+    large: 相当于medium 6/5           (h3)，
+    x-large: 相当于medium 3/2        (h2)，
+    xx-large: 相当于medium 2/1      (h1)
+
+    谷歌浏览器识别最小字体为12px;
+
+    2、文本颜色：{color:颜色值;}
+
+    #f7f7f7-------背景
+    #3e3e3e-----正文
+    #909090-----浅色文本
+    #999
+    #ccc------边框
+    #eee------背景
+
+    3、文本字体：{font-family:"中文字体1"，字体2，字体3；}
+
+    说明：浏览器首先会寻找字体1、如存在就使用改字体来显示内容，如在字体1不存在的情况下，则会寻找字体2，如字
+    体2也不存在，按字体3显示内容，如果字体3 也不存在；则按系统默认字体显示；
+    当字体是中文字体时，需加双引号；
+    当英文字体中有空格时，需加双引号如（“Times New Roman”）
+    当英文字体只有一个单词组成是不加双引号；如：（Arial）；
+    Windows中文版本操作系统下，中文默认字体为宋体或者新宋体，英文字体默认为Arial.
+    系统字体所在位置：C:\Windows\Fonts
+
+    4、加粗：{font-weight:bolder(更粗)、lighter（更细）/bold（加粗）/normal（常规）/100-900;} 
+    说明：在css规范中，把字体的粗细分为9个等级，分别为100——900，其中100对应最轻的字体变形，而900对应最重的
+    字体变形，
+
+    一般
+    500常规字体
+    600-900加粗字体
+    100-400变细（常规）
+
+    bold  加粗
+    100  变细
+
+    h1-h6{font-weight:normal}
+
+    5、倾斜：font-style：italic(倾斜)/normal（常规显示）;
+    i,em{ font-style:normal;} -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- back(),可以回退到上一个页面，作用和浏览器的回退按钮一样。 -->
+    <!-- forward()，可以跳转到下一个页面，作用和浏览器的前进按钮一样。 -->
+    <!-- go()，可以用来跳转打指定的页面，需要一个整数作为参数，
+    1表示向前跳转一个页面，2表示向前跳转两个页面，以此类推。
+    -1表示向后跳转一个页面，-2表示向后跳转两个页面，以此类推。 -->
+    <h1>1.window</h1>
+    <h2><a href="h1.html">1页</a></h2>
+    <h2><a href="h2.html">2页</a></h2>
+    <h2><a href="h3.html">3页</a></h2>
+    <button onclick="history.go(-1)">go(-1)</button>
+    <button onclick="history.go(-2)">go(-2)</button>
+    <button onclick="history.back()">返回back</button>
+    <button onclick="history.go(1)">go(1)</button>
+    <button onclick="history.go(2)">go(2)</button>
+    <button onclick="history.forward( )">前进forward</button>
+
+</body>
+
+</html>

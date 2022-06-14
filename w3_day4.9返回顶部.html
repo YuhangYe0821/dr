@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            height: 2000px;
+            background: linear-gradient(#fff, #c00, #000);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box" id="top">顶部</div>
+    <button>返回顶部location</button>
+    <button>返回顶部scrolltTo</button>
+    <button>返回顶部scrollBy</button>
+    <button>返回顶部scroll</button>
+    <a href="#top">返回顶部的超链接</a>
+
+    <script>
+        var btn = document.getElementsByTagName("button");
+        btn[0].onclick = function () {
+            location.hash = "#top";
+            location.hash = ""
+        }
+
+        btn[1].onclick = function () {
+            window.scrollTo(0, 0);
+            //(0,0)代表x,y轴
+        }
+        btn[2].onclick = function () {
+            window.scrollBy(0, -2000)
+            // 盒子的高度为2000
+        }
+        btn[3].onclick = function () {
+            window.scroll(0, 0);
+        }
+    </script>
+</body>
+
+</html>

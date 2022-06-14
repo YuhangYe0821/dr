@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.点击事件 onclick -->
+    <p>单击按钮触发函数</p>
+    <button onclick="fun_0( )">单击</button>
+    <p id="p0">0</p>
+
+    <!-- 2.双击事件 ondblclick -->
+    <p>双击按钮触发函数</p>
+    <button ondblclick="fun_1( )">双击</button>
+    <p id="p1">1</p>
+
+    <!-- 3.鼠标按钮抬起，按下  onmouseup  onmousedown -->
+    <p onmousedown="fun_2(this,'red')" onmouseup="fun_2(this,'blue')">22222</p>
+
+    <!-- 4.鼠标移入 移出  onmouseenter  onmouseleave -->
+    <img src="../biaoqing/17.png" onmouseenter="fun_3(this)" onmouseleave="fun_4(this)" >
+
+    <!-- 5.onkeydown 键盘按下事件 -->
+    <p>键盘按下时弹出警告框</p>
+    <input type="text" onkeydown="fun_5()">
+
+    <!-- 6.某个键盘键被松开onkeyup -->
+    <p>键盘松开时变大写</p>
+    <input type="text" onkeyup="fun_6()" id="fname">
+
+    <!-- 7.某个键盘按下并松开  onkeypress -->
+    <p>按下键盘松开后变小写</p>
+    <input type="text" onkeypress="fun_7()" id="ffname">
+
+
+    <script>
+        function fun_0() {
+            var a=document.getElementById('p0');
+            a.innerHTML='单击';
+        }
+
+        function fun_1() {
+            var b=document.getElementById('p1');
+            b.innerHTML='双击';
+        }
+
+        function fun_2(ele,isColor) {
+            ele.style.color=isColor;
+        }
+
+        function fun_3(c) {
+            c.style.width='200px';
+            c.style.height='194px';
+        }
+
+        function fun_4(d) {
+            d.style.width='100px';
+            d.style.height='97px';
+        }
+
+        function fun_5() {
+            alert('别按键盘');
+        }
+
+        function fun_6() {
+            var myinput=document.getElementById("fname");
+            myinput.value=myinput.value.toUpperCase();
+            //toLocaleLowerCase() 将字符转为小写
+            //toUpperCase(); 将字符转为大写
+        }
+
+        function fun_7() {
+            var myinput=document.getElementById("ffname");
+            myinput.value=myinput.value.toLocaleLowerCase();
+            //toLocaleLowerCase() 将字符转为小写
+            //toUpperCase(); 将字符转为大写
+        }
+    </script>
+</body>
+</html>

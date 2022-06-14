@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+
+        #d2,
+        #d3,
+        #d4 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            /* float : left / rigth /none;
+            一直向左或向右，直到遇到父盒子边缘或者浮动盒子的边缘为止 
+            clear:both;清除浮动 （放在不想被浮动影响的盒子身上）*/
+        }
+
+        #d2 {
+            background-color: grey;
+        }
+
+        #d3 {
+            background-color: red;
+        }
+
+        #d4 {
+            background-color: blue;
+        }
+
+        #p1 {
+            clear: both;
+        }
+
+        .div {
+            width: 300px;
+            height: 300px;
+            background-color: greenyellow;
+        }
+
+        #div1 {
+            width: 100px;
+            height: 200px;
+            background-color: aqua;
+            float: left;
+        }
+
+        #div2 {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            float: right;
+        }
+
+        #div3 {
+            width: 100px;
+            height: 200px;
+            background-color: yellow;
+            float: right;
+        }
+
+        #div4 {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <p id="p1">123456</p>
+    </div>
+    <div class="div">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+    </div>
+</body>
+
+</html>

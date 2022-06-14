@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <button @click="a++">add to A</button>
+        <button @click="b++">add to B</button>
+        <h2>{{a}}</h2>
+        <h2>{{b}}</h2>
+        <h3>age+a={{addtoA()}}</h3>
+        <h3>age+b={{addtoB()}}</h3>
+    </div>
+<!-- 点击A按钮，打印出AB，点击B按钮打印AB,console.log多次执行。
+        每点击一次都渲染DOM，是非常耗费性能的。 -->
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                a:0,
+                b:0,
+                age:10
+            },
+            methods:{
+               addtoA(){
+                   console.log('add to A')
+                   return this.age+this.a
+               },
+               addtoB(){
+                   console.log('add to B')
+                   return this.age+this.b
+               }
+            },
+        })
+    </script>
+</body>
+</html>

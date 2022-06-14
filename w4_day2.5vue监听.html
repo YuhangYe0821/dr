@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <!-- <button @click="counter++">+1</button>
+        <div>计数:{{counter}}</div> -->
+        <select v-model="form.region">
+            <option v-for="item in olist" :key="item.id" :label="item.name" :value="item.name"></option>
+        </select>
+    </div>
+ <!-- 我们可以通过 watch 来响应数据的变化 -->
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                // counter:1,
+                form:{
+                    region:''
+                },
+                olist:[
+                    {id:1, name:'张三'},
+                    {id:2, name:'李四'},
+                    {id:3, name:'王五'},
+                    {id:4, name:'赵六'},
+                ]
+            },
+            methods:{
+               
+            },
+            watch:{
+                // counter(nval,oval){
+                //     console.log(nval,oval)
+                //     alert('原来的数据是'+oval+',新数据是'+nval)
+                // }
+                'form.region'(nval,oval){
+                    console.log("新数据:"+nval,'原数据:'+oval)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

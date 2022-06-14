@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="">
+    <button>提交</button>
+    
+    
+    <script>
+        //正则表达式是由一个字符序列形成的搜索模式。
+        //当你在文本中搜索数据时，你可以用搜索模式来描述你要查询的内容。
+        //正则表达式可以是一个简单的字符，或一个更复杂的模式。
+        //正则表达式可用于所有文本搜索和文本替换的操作。
+        //1.  \b 单词的开始或结束
+        //2.  . 任意[一个]非换行字符
+        //3.  * 前面的字符(可以是普通字符，也可以是元字符)重复
+        //4.  \d 任意[一个]数字
+        //5.  {n} 前面的字符，重复n次(n是- 一个数字)
+        //6.  {n,m} 前面的字符，重复n到m次(m,n都是数字)
+        //7.  ^ 字符串开始的位置
+        //8.  $ 字符串结束的位置
+
+        //元字符（meta  character）
+     
+        //  .匹配除换行符以外的任意字符
+        // \w 匹配字母或数字或下划线或汉字 等价于 '[^A-Za-z0-9_]'。
+        // \s 匹配任意的空白符
+        // \d 匹配数字
+        // \b 匹配单词的开始或结束
+        // ^ 匹配字符串的开始
+        // $ 匹配字符串的结束
+
+        var telNo='0242-12345678';
+        var te1Reg1=/^0\d{2,3}-\d{7,8}$/;//以0开头，重复2-3次，任意一个数字，重复7-8次
+        console.log(te1Reg1.test(telNo));
+
+        //正则表达式对象的test方法，用来测试参数字符串，是否符合正则所描述的规则
+        //符合，则返回true，否则，返回false
+        //只要字符串中有 字串符合正则的规则，则返回true
+        //如果需要整个字符串都跟正则进行匹配，则需要加两个东西
+        //字符串开始的位置、字符串结束的位置
+
+        var telReg2=/^\w{6,20}$/;//字母或数字或下划线或汉字,重复6-20次
+        var istext='ww3_3';
+        console.log(telReg2.test(istext));
+
+        //匹配一个奇数数字的正则为:
+        var oddDigitalReg=/^[13579]+$/ //+是重复一次或更多次
+        console.log(oddDigitalReg.test('13515977971'))
+
+        //匹配一个奇数数字结尾的正则为:
+        var oddReg=/^\d*[13579]$/
+        // *前面的字符(可以是普通字符，也可以是元字符)重复
+        console.log(oddReg.test('11326241357932'))
+
+
+        /*正则表示式内的[]内的-所代表的意义为:
+        中括号中匹配的范围从-前面的字符开始，到-后面的字符结束
+        开始和结束的范围，是有字符的字符编码表示
+        例如: /[a-z]/ 表示97到122之间的字符*/
+        // var noneZeroReg=/ [123456789]/ //[1-9]
+        //表示- -个英文字符
+        // var \
+    // lphabet=/[a-ZA-Z]/
+    //用户名规则:数字、字母、下划线， 数字不能开头，6-20位
+    var userReg = /^[a-zA-Z_]\w{5,19}$/;
+    document.querySelector('button').onclick=function() {
+        var username=document.querySelector('input').value;
+        console.log(userReg.test(username));
+    };
+
+    //这个正则表达式中，有两点:
+    /* 1.reg1|reg2，表示两个里面匹配-“个
+    2.()分组，每个分组表示-一个子表达式*/
+    var mood='xihexi';
+    var moodReg=/^xi((ha){2}|he)xi$/;
+    console.log(moodReg.test(mood));
+
+    </script>
+
+</body>
+</html>

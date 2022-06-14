@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[1,2,3];
+
+        /* push()返回数组中元素的个数，向数组尾部增加元素，有多少加多少 */
+        var b=a.push(4,5,6);
+        console.log('a='+a);
+
+        /* pop()从数组的尾部删除一个元素，返回删除后的元素，不接收参数 */
+        var c=a.pop();
+        console.log('a='+a);
+
+        /* unshift()返回数组中元素的个数向数组的头部增加元素，括号中有多少就加多少 */
+        var d=a.unshift(-1,0);
+        console.log('a='+a);
+
+        /* shift()从数组的头部删除一个元素，返回删除后的元素，不接收参数 */
+        var e=a.shift();
+        console.log('a='+a);
+
+        /* slice(start,end):返回从原数组中指定开始下标到结束下标之间的项组成的新数组  //包括前面，不包括后面*/
+        var f=a.slice(1,4);
+        console.log('f='+f);
+
+        /* splice()一个参数，从起始的位置开始，直到数组结束
+
+        两个参数从下标为0开始，第二个参数截取长度 */
+        var g=a.splice(5);
+        console.log('a='+a);
+
+        var h=a.splice(0,2);
+        console.log('h='+h);
+        console.log('a='+a);
+
+        //添加
+        var i=a.splice(0,0,0,1);//在下标是0的前面添加1,2
+        console.log('a='+a);
+
+        //替换
+        //第一个参数下标  第二个参数要替换的长度  第3，4个参数是要替换的元素
+        var j=a.splice(0,2,1,2);//从下标是0的元素开始,替换长度为2,要替换为1，2
+        console.log('a='+a);
+        
+        /* reverse()数组翻转，该方法会改变原来的数组，而不会创建新的数组 */
+        var k=a.reverse();
+        console.log('k='+k);
+        console.log('a='+a);
+
+        /* sort()无参数默认从小到大排序，判断方法：按位判断 */
+        var l=[2,6,9,3,1];
+        // var m=l.sort();
+        l.sort();
+        // console.log('m='+m);
+        console.log('l='+l);
+        
+        l.sort(function(a,b){return a<b?1:-1});
+        console.log('l='+l);
+
+        /* join('-')将数组转换为字符串，以括号内的拼接 */
+        var n=[1,23,2];
+        var o=n.join('-');
+        console.log(o);
+        
+
+
+
+    </script>
+</body>
+</html>

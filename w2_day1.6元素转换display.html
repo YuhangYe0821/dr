@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        div{
+            display: inline;
+            background-color: blue;
+        }
+        ul li{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <span>123</span><!-- inline 行内元素 -->
+    
+    <div>456</div><!-- block 块级元素 -->
+    
+    <ul><!-- inline-block 行内块元素-->
+        <li>789</li>
+        <li>987</li>
+    </ul>
+    <!-- 1.inline 行内元素 元素会在一行内显示，超出屏幕宽度自动换行，
+    不能设置宽度和高度，元素的宽度和高度只能是靠元素内的内容撑开。
+    如果要设置margin和padding属性,只能设置左右,不能设置上下
+    示例元素：span,b,i,a,u,sub,sup,strong,em
+    
+
+    2.block 块级元素 会独占一行，如果不设置宽度，其宽度会自动填满父元素的宽度，
+    可以设置宽高，即使设置了宽度，小于父元素的宽度，块级元素也会独占一行。
+    示例元素：div,h1-h6,ul,ol,dl,p
+
+
+    3、inline-block 行内块元素 与行内元素一样可以再一行内显示，而且可以设置宽高，
+    可以设置margin和padding。
+     示例元素：input,button,img
+
+
+     4.none 此元素不会被显示， -->
+</body>
+</html>

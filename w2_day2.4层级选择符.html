@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 p{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .d2>p{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+        .d3 .d33+div{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .d4 .d44~div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        /* 
+        层级选择符
+        1、后代选择器（E F）  包含选择器
+        2、子代选择器（E > F）其中E为父元素，F为子元素，一定是父子元素
+        3、相邻兄弟选择器（E+F） E和F是兄弟是同辈，F在E后面，并且相邻
+        4、通用选择器（E~F） E后面所有兄弟F  不包括E
+        */
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <div></div>
+        <div>
+            <p>p1</p>
+        </div>
+        <p>p2</p>
+    </div>
+    <br>
+    <div class="d2">
+        <div></div>
+        <div>
+            <p>p1</p>
+        </div>
+        <p>p2</p>
+    </div>
+    <br>
+    <div class="d3">
+        <div>1</div>
+        <div>2</div>
+        <div class="d33">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <div class="d4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="d44">4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

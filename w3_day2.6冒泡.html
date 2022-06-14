@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="box">1
+        <h2>2
+            <em>3</em>
+        </h2>
+    </div>
+    
+    
+    <script>
+        var box = document.getElementById("box");
+        var h2 = document.getElementsByTagName("h2")[0];
+        var em = document.getElementsByTagName("em")[0];
+        
+        box.addEventListener("click",function(){
+            console.log("我是box")
+        },false)
+            //false 冒泡  true 捕获
+        h2.addEventListener("click",function(){
+            console.log("我是h2")
+        },false)
+
+        em.addEventListener("click",emf,false)
+        
+        function emf(e){
+            console.log("我是em")
+            // e.stopPropagation();//阻止冒泡
+        }
+    </script>
+</body>
+</html>

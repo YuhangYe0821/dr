@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: black
+        }
+        #i{
+            background-color: aqua;
+        }
+        .c{
+            background-color: brown;
+        }
+        .box p{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 选择符的权重
+    css中用四位数字表示权重，权重的表达方式如：0，0，0，0
+    类型选择符的权重为  0001     
+    class选择符的权重为 0010     
+    id选择符的权重为    0100     
+    内联样式的权重为    1000   
+    伪类选择符的权重为  0010   a:hover{}   10
+    包含选择符的权重：为各选择符的权中之和（仅用于包含选择符之间的比较）
+    #header div .box{}        100+1+10=111 -->
+    <div id="i" class="c" style="background-color: chartreuse;">123</div>
+    <div class="box" id="header">
+        <p>456</p>
+    </div>
+</body>
+</html>

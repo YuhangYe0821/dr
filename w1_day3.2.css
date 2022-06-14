@@ -1,0 +1,10 @@
+/* 外部样式的建立及调用
+方法 一
+<link rel="stylesheet" type="text/css" href="目标文件的路径及文件名全称" 
+说明：使用link元素导入外部样式表时，需将该元素写在文档头部，即 
+/* <head>与</head>之间。 */
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

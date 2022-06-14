@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #list li{
+            list-style: none;
+            background-color: aqua;
+            height: 40px;
+            width: 50px;
+        }
+
+        #list .clicked{
+            background-color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <ul id="list">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+        <li>列表6</li>
+        <li>列表7</li>
+        <li>列表8</li>
+        <li>列表9</li>
+    </ul>
+
+
+
+    <script>
+    /* 事件委托——给父元素绑定事件，用来监听子元素的冒泡事件，
+    并找到是哪个子元素的事件 */
+
+    /* 事件委托技术可以避免对每个子元素添加事件监听器，
+    减少操作DOM节点的次数，从而减少浏览器的重绘和重排，提高代码的性能。
+    使用事件委托，只有父元素与DOM存在交互，其他的操作都是在JS虚拟内存中完成的，
+    这样就大大提高了性能。 */
+
+    /* 当子元素有很多，需要对子元素的时间进行监听的时候 */
+
+        var list=document.querySelector('#list');
+        list.onclick=function(e){
+            var target=e.target || e.srcElement;
+            //捕获当前事件作用对象
+            if (target.nodeName=='li') {
+                if (target.className=='clicked') {
+                    target.className=' '
+                }
+            }else{
+                target.className='clicked'
+            }
+        }
+
+    </script>
+</body>
+</html>

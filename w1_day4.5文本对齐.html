@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 1000px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+        .d2{
+            width: 200px;
+            height: 100px;
+            border: solid 2px #111;/*框*/
+
+            /* 右对齐 */
+            text-align: right;
+        }
+        .d3{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(226, 140, 27);
+
+            text-align: center;/* 水平居中对齐 */
+              
+            display: table-cell;/*按照单元格的样式显示元素*/
+            vertical-align: middle;/*垂直居中对齐*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="d1">123456</div>
+    <!-- 水平对齐方式{text-align:left/right/center/justify(两端对齐，存在一定的兼容性问题);} -->
+    <div class="d2">去问驱蚊器委屈委屈为啥答案都在执行操作</div>
+
+    <div class="d3">3210</div>
+    <!-- 垂直对齐方式{vertical-align:top/bottom/middle;}
+    vertical-align对单元格显示方式：table-cell  的元素才会起作用.
+    要实现上下垂直居中对齐，可以采用如下样式
+    display（元素类型的转换）:table-cell; /*按照单元格的样式显示元素*/
+    vertical-align:middle;   /*垂直居中对齐*/ -->
+</body>
+</html>

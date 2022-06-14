@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box"></div>
+
+    <script>
+        var box = document.getElementById("box");
+        var myvue = {
+            name: ""
+        }
+        Object.defineProperty(myvue, "name", {
+            get: function () {
+                console.log("get")
+                return box.innerHTML
+            },
+            set: function (value) {
+                console.log("set")
+                return box.innerHTML = value
+            }
+        })
+        // 给对象添加一个新的属性，或者针对对象里的某些属性，可以给这个属性设置一些特性，比如是否只读
+        // var obj = {}
+        // Object.defineProperty(obj, prop, descriptor) descriptor属性描述符
+        // get set 拦截，实现响应式原理，改变数据就改变页面
+    </script>
+
+</body>
+
+</html>

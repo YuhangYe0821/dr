@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 理论：canvas是一个HTML5新增元素，可以使用canvas元素在网页中进行绘图，可以设置宽度和高度
+    可以通过dom在javaScript中获得canvas元素。可以使用css对canvas元素进行修饰。网页中可以有多个
+    canvas，ie8以及更早的浏览器不支持canvas -->
+    <!-- canvas绘制图形的流程步骤
+    1）通过javascript DOM 方法获得canvas元素
+    2）调用canvas的getContext('2d')方法，获得画布绘图环境。目前绘图环境只支持2D环境，可获得
+    一个CanvasReadingContext2D对象。
+    3)通过绘图环境调用方法。设置属性，完成绘图过程
+    4）使用填充或者的方式将上一步的绘图过程在页面中绘制出来。 -->
+
+    <!-- 1）rect():绘制一个矩形的路径（没有显示效果，需要fill或者stroke才显示） -->
+
+    <!-- 注意：画布的坐标系左上角是坐标原点。向右x坐标增加，为正值；向下y坐标增加，为正值。 -->
+
+    <!-- 案例1
+    完成一个canvas画布，画布带边框，便于查看坐标关系。在画布中绘制一个矩形，
+    分别使用fill和stroke的方法将矩形绘制出来 -->
+
+    <canvas id="isCanvas" width="500px" height="500px" style="border: 1px solid black;"></canvas>
+
+
+    <script>
+        var cvs = document.getElementById("isCanvas");
+        var ctx = cvs.getContext("2d");
+        //fillRect()填充一个矩形
+        //strokeRect()描边一个矩形
+        //fillStyle:填充的颜色
+        //strokeStyle:描边的路径的颜色
+
+        // ctx.fillRect(0,0,50,50)//位置+大小
+
+        // ctx.strokeRect(50,50,50,50)
+
+        // ctx.fillStyle="#FF0000";
+        // ctx.fillRect(100,100,50,50)
+
+        // ctx.strokeStyle="#FF0000";
+        // ctx.strokeRect(150,150,50,50)
+
+        // 注意：弧是一种路径，arc方法后并不能将弧绘制在画布上，
+        //需要使用stroke或fill才可以完成绘制
+        // 不封闭的路径推荐使用stroke进行显示，只绘制路径本身。
+        //lineWidth:线条宽度
+        // PI就是圆周率π，PI是弧度制的π,也就是180°
+        //圆的中心的 x 坐标。
+        //圆的中心的 y 坐标。
+        //圆的半径
+        // 起始角度
+        // 结束角度
+
+        ctx.lineWidth = 15;
+
+        ctx.strokeStyle = "#FF0000";
+        ctx.beginPath();
+
+        ctx.moveTo(50, 50);
+        ctx.lineTo(80, 80);
+        ctx.lineTo(110, 50);
+        ctx.lineTo(140, 50);
+        ctx.lineTo(140, 120);
+        ctx.lineTo(80, 180);
+        ctx.lineTo(20, 120);
+        ctx.lineTo(20, 50);
+        ctx.lineTo(55, 50);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(280, 280, 50, 0, Math.PI);
+        ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.arc(400,280,50,0,Math.PI);
+        // ctx.stroke();
+
+    </script>
+</body>
+
+</html>

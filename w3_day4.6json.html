@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 什么是json
+    JSON是用于存储和传输数据的格式
+    JSON通常用于服务端向网页传递数据
+    是一种轻量级的数据交换格式
+    JSON是独立的语言 -->
+    <div id="demo"></div>
+
+    <script type="text/javaScript">
+        var obj={
+            "name":"qq",
+            "age":"11"
+        }
+        console.log(obj)
+
+        //JSON.parse()用于将一个JSON字符串转换为JavaScript对象
+        var isText='{"sites":['+
+                '{"name":"Runoob","url":"www.runoob.com"},'+
+                '{"name":"Google","url":"www.google.com"},'+
+                '{"name":"Taobao","url":"www.taobao.com"}]}';
+        console.log(JSON.parse(isText))
+
+        fun=JSON.parse(isText);
+        document.getElementById("demo").innerHTML=fun.sites[1].name+" "+fun.sites[1].url;
+
+
+        //JSON.stringify()  方法用于将JavaScript值转换为JSON字符串
+        var str={
+            name:"baidu",
+            site:"www.baidu.com"
+        }
+        console.log(JSON.stringify(str))
+        isStr=JSON.stringify(str,null,4)
+        console.log(JSON.stringify(isStr))
+        document.write(isStr)
+        document.write("<pre>"+isStr+"</pre>")
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <div id="box">
+        <button @click="a++">add to A</button>
+        <button @click="b++">add to B</button>
+        <h2>a-{{a}}</h2>
+        <h2>b-{{b}}</h2>
+        <h3>age+a={{addtoA}}</h3>
+        <h3>age+b={{addtoB}}</h3>
+    </div>
+ <!-- 计算属性是基于他们的依赖进行缓存的，（存在js对象里）
+        - 计算属性只有在他的相关依赖发生改变时才会重新求值
+        点击A按钮，打印出A，点击B打印出B,console.log()只执行一次。
+       使用的是虚拟DOM,把真是的DOM拷贝一份，操作的是虚拟DOM,
+       虚拟DOM跟真实DOM不同时才会触发这个方法，如果相同就不会触发这个方法，
+       耗时，大量搜索时才用计算属性。 -->
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                a:0,
+                b:0,
+                age:20
+            },
+            methods:{
+
+            },
+            computed:{
+               addtoA(){
+                   console.log('add to A')
+                   return this.age+this.a
+               },
+               addtoB(){
+                   console.log('add to B')
+                   return this.age+this.b
+               }
+            },
+        })
+    </script>
+</body>
+</html>
